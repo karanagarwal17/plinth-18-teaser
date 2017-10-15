@@ -1,81 +1,38 @@
-@import url('https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css');
-* {
-  margin: 0;
-  padding: 0;
+body {
+  opacity: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #212121;
 }
-
-html {
-  overflow: hidden;
+body.ready {
+  opacity: 1;
 }
+.logo-animation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top:  230px;
+  border: 1px solid black;
 
-#wrapper {
-  width: 20%;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  opacity: 0;
-  z-index: 1000;
-  margin-left: -10%;
-  margin-top: -13%;
-  text-align: center;
 }
-
-#text {
-  margin-top: 15%;
+.letters {
+  position: relative;
+  display: flex;
+  width: 500px;
+  height: 162px;
 }
-
-#footer {
-  margin-top: 30%;
+.letter {
+  position: relative;
+  width: 162px;
+  height: 170px;
 }
-
-.universal-inline-block {
-  display: inline-block;
-  zoom: 1;
-  *display: inline;
+.letter:not(:first-child) {
+  margin-left: -42px;
 }
-
-.social-icons {
-  text-align: center;
-  font-family: "Open Sans";
-  font-weight: 300;
-  font-size: 1.5em;
-  color: #448aaf;
-}
-
-.social-icons ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.social-icons ul li {
-  display: inline-block;
-  zoom: 1;
-  *display: inline;
-  vertical-align: middle;
-}
-
-.social-icons ul li a {
-  display: block;
-  font-size: 1.4em;
-  margin: 0 10px;
-  text-decoration: none;
-}
-
-.social-icons ul li a i {
-  color: #ffffff;
-  -webkit-transition: all 0.2s ease-in;
-  -moz-transition: all 0.2s ease-in;
-  -o-transition: all 0.2s ease-in;
-  -ms-transition: all 0.2s ease-in;
-  transition: all 0.2s ease-in;
-}
-
-.social-icons ul li a:hover i {
-  color: #a1a1a1;
-}
-
-.social-icons ul li a:focus i, .social-icons ul li a:active i {
-  transition: none;
-  color: #a1a1a1;
+.letter-i {
+  z-index: 1;
+  width: 5px;
+  transform-origin: 100% 50%;
 }
