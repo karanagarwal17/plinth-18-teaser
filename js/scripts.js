@@ -84,6 +84,7 @@ function init() {
 }
 
 function setCanvasSize() {
+  console.log(window.innerWidth, window.innerHeight);
   C.width = window.innerWidth;
   C.height = window.innerHeight;
 
@@ -135,7 +136,7 @@ function updateStar(i) {
     }
 
   } else {
-    added_mass += 20 * star.r;
+    added_mass += 15 * star.r;
 
     R.splice(i, 1);
     makeStar(1);
@@ -178,6 +179,10 @@ function loop() {
 window.addEventListener("resize", function() {
   setCanvasSize();
 });
+
+window.onload = function(){
+  setCanvasSize();
+}
 
 //setCanvasSize();
 //setBG();

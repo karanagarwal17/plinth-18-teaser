@@ -31,7 +31,7 @@ function fadeIn(el, callback) {
 
 function move(elem, callback) {
   var pos = 140;
-  var id = setInterval(frame, 1);
+  var id = setInterval(frame, 2);
   function frame() {
     if (pos < 0) {
       clearInterval(id);
@@ -39,8 +39,10 @@ function move(elem, callback) {
         callback();
       }
     } else {
-      pos-=3;
-      elem.style.marginTop = pos + 'px';
+      pos-=1;
+      if(elem) {
+        elem.style.marginTop = pos + 'px';
+      }
     }
   }
 }
